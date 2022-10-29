@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>Тестовая программа</title>
+<style>
+.ms {
+	display:inline-block;
+	width:350px;
+	background-color:#000;
+	padding:10px;
+}
+.ms_top {
+	color:#CCC;
+	text-align:center;
+	font-size:18px;
+	font-family:Tahoma, Geneva, sans-serif;
+}
+.ms_main {
+	color:#09F;
+	font-size:18px;
+	padding-top:15px;
+}
+.ms_m_left {
+	display:inline-block;
+	width:100px;
+}
+.ms_m_left2 {
+	display:inline-block;
+	width:158px;
+	margin-top:3px;
+}
+.ms_btn1 {
+	display:inline-block;
+	width:30px;
+	background-color:#666;
+	vertical-align:bottom;
+	margin-bottom:1px;
+}
+/***/
+.ms_btn1_1 {
+	background-color:#666;
+}
+.ms_btn1_2 {
+	background-color:#4472c4;
+}
+.ms_btn1_3 {
+	background-color:#70ad47;
+}
+.ms_btn1_4 {
+	background-color:#ffc000;
+}
+.ms_btn1_5 {
+	background-color:#C00;
+}
+/***/
+.ms_inp {
+	width:50px;
+	background-color:#CCC;
+	border:2px solid #CCC;
+}
+</style>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+var script1 = {
+	start:function() {
+		/*
+		ms_btn1_1 - серое (0)
+		ms_btn1_2 - синее (1)
+		ms_btn1_3 - зеленое (300)
+		ms_btn1_4 - желтое (500)
+		ms_btn1_5 - красное (800)
+		*/
+		//$('#').addClass('');
+		//
+		$('#block1').removeClass('ms_btn1_1');
+		$('#block1').removeClass('ms_btn1_2');
+		$('#block1').removeClass('ms_btn1_3');
+		$('#block1').removeClass('ms_btn1_4');
+		$('#block1').removeClass('ms_btn1_5');
+		//
+		$('#block2').removeClass('ms_btn1_1');
+		$('#block2').removeClass('ms_btn1_2');
+		$('#block2').removeClass('ms_btn1_3');
+		$('#block2').removeClass('ms_btn1_4');
+		$('#block2').removeClass('ms_btn1_5');
+		//
+		$('#block3').removeClass('ms_btn1_1');
+		$('#block3').removeClass('ms_btn1_2');
+		$('#block3').removeClass('ms_btn1_3');
+		$('#block3').removeClass('ms_btn1_4');
+		$('#block3').removeClass('ms_btn1_5');
+		//
+		$('#block4').removeClass('ms_btn1_1');
+		$('#block4').removeClass('ms_btn1_2');
+		$('#block4').removeClass('ms_btn1_3');
+		$('#block4').removeClass('ms_btn1_4');
+		$('#block4').removeClass('ms_btn1_5');
+		//
+		$('#block5').removeClass('ms_btn1_1');
+		$('#block5').removeClass('ms_btn1_2');
+		$('#block5').removeClass('ms_btn1_3');
+		$('#block5').removeClass('ms_btn1_4');
+		$('#block5').removeClass('ms_btn1_5');
+		//
+		$('#block6').removeClass('ms_btn1_1');
+		$('#block6').removeClass('ms_btn1_2');
+		$('#block6').removeClass('ms_btn1_3');
+		$('#block6').removeClass('ms_btn1_4');
+		$('#block6').removeClass('ms_btn1_5');
+		if( $('#val1').val() < 1 ) {
+			//серое
+			$('#block1').addClass('ms_btn1_1');
+			$('#block6').addClass('ms_btn1_1');
+		}else if( $('#val1').val() < 300 ) {
+			//синее
+			$('#block1').addClass('ms_btn1_2');
+			$('#block6').addClass('ms_btn1_2');
+		}else if( $('#val1').val() < 500 ) {
+			//зеленое
+			$('#block1').addClass('ms_btn1_3');	
+			$('#block6').addClass('ms_btn1_3');
+		}else if( $('#val1').val() < 800 ) {
+			//желтое
+			$('#block1').addClass('ms_btn1_4');	
+			$('#block6').addClass('ms_btn1_4');
+		}else{
+			//Красное
+			$('#block1').addClass('ms_btn1_5');
+			$('#block6').addClass('ms_btn1_5');
+		}
+		//
+		if( $('#val2').val() < 1 ) {
+			//серое
+			$('#block2').addClass('ms_btn1_1');
+			$('#block5').addClass('ms_btn1_1');
+		}else if( $('#val2').val() < 300 ) {
+			//синее
+			$('#block2').addClass('ms_btn1_2');
+			$('#block5').addClass('ms_btn1_2');
+		}else if( $('#val2').val() < 500 ) {
+			//зеленое
+			$('#block2').addClass('ms_btn1_3');
+			$('#block5').addClass('ms_btn1_3');
+		}else if( $('#val2').val() < 800 ) {
+			//желтое
+			$('#block2').addClass('ms_btn1_4');
+			$('#block5').addClass('ms_btn1_4');
+		}else{
+			//Красное
+			$('#block2').addClass('ms_btn1_5');
+			$('#block5').addClass('ms_btn1_5');
+		}
+		//
+		if( $('#val3').val() < 1 ) {
+			//серое
+			$('#block3').addClass('ms_btn1_1');
+			$('#block4').addClass('ms_btn1_1');
+		}else if( $('#val3').val() < 300 ) {
+			//синее
+			$('#block3').addClass('ms_btn1_2');
+			$('#block4').addClass('ms_btn1_2');
+		}else if( $('#val3').val() < 500 ) {
+			//зеленое
+			$('#block3').addClass('ms_btn1_3');
+			$('#block4').addClass('ms_btn1_3');
+		}else if( $('#val3').val() < 800 ) {
+			//желтое
+			$('#block3').addClass('ms_btn1_4');
+			$('#block4').addClass('ms_btn1_4');
+		}else{
+			//Красное
+			$('#block3').addClass('ms_btn1_5');
+			$('#block4').addClass('ms_btn1_5');
+		}
+		//
+	}
+};
+</script>
+</head>
+
+<body>
+<!-- -->
+<div class="ms">
+	<div class="ms_top">
+    	<b><i>Need for Parts Calculator</i></b>
+    </div>
+    <div class="ms_main">
+    	<div>
+    		<b class="ms_m_left"><i>SPEED</i></b>
+            <input onKeyDown="script1.start()" onKeyUp="script1.start()" type="text" id="val1" value="0" class="ms_inp">
+            <div id="block1" class="ms_btn1">&nbsp;</div> <b>Engine</b>
+        </div>
+        <div>
+        	<b class="ms_m_left"><i>ACCEL</i></b>
+            <input onKeyDown="script1.start()" onKeyUp="script1.start()" type="text" id="val2" value="0" class="ms_inp">
+            <div id="block2" class="ms_btn1">&nbsp;</div> <b>Forced Induction</b>
+        </div>
+        <div>
+        	<b class="ms_m_left"><i>HNDL</i></b>
+            <input onKeyDown="script1.start()" onKeyUp="script1.start()" type="text" id="val3" value="0" class="ms_inp">
+            <div id="block3" class="ms_btn1">&nbsp;</div> <b>Transmission</b>
+        </div>
+        <div>
+        	<b class="ms_m_left2">&nbsp;</b>
+            <div id="block4" class="ms_btn1">&nbsp;</div> <b>Suspension</b>
+        </div>
+        <div>
+        	<b class="ms_m_left2">&nbsp;</b>
+            <div id="block5" class="ms_btn1">&nbsp;</div> <b>Brakes</b>
+        </div>
+        <div>
+        	<b class="ms_m_left2">&nbsp;</b>
+            <div id="block6" class="ms_btn1">&nbsp;</div> <b>Tires</b>
+        </div>
+
+    </div>
+</div>
+<!-- -->
+</body>
+</html>

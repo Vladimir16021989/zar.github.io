@@ -1,0 +1,28 @@
+php_value error_reporting E_ALL
+
+AddDefaultCharset windows-1251
+
+Options -Indexes
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{ENV:REDIRECT_WasPHP} !^yes$
+RewriteRule ruletka.pl ruletka.php [QSA,L,E=WasPERL:yes]
+RewriteRule bandit.pl bandit.php [QSA,L,E=WasPERL:yes]
+RewriteRule blackjack.pl blackjack.php [QSA,L,E=WasPERL:yes]
+RewriteRule casino/SWFP.pl casino/SWFP.php [QSA,L,E=WasPERL:yes]
+RewriteCond %{ENV:REDIRECT_WasPHP} !^yes$
+RewriteRule ^r([0-9]+)/?$ /reg.php?ref=$1 [L] 
+
+RewriteRule ^register/?$ /register.php [L]
+RewriteRule ^reg/?$ /reg.php [L]
+
+RewriteRule ^enter/?$ /enter.php [L]
+
+RewriteRule ^mobile/?$ /main_mobile.php [L]
+
+RewriteRule ^btl([0-9]+)/?$ /jx/battle/refresh$1.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
